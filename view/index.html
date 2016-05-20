@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <!-- Material Design fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="/vendor/bootstrap-3.3.6-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/vendor/bootstrap-material-design-master/dist/css/material-fullpalette.css">
+    <link rel="stylesheet" href="/vendor/bootstrap-material-design-master/dist/css/ripples.min.css">
+    <link rel="stylesheet" href="/vendor/angular-charts/angular-chart.min.css">
+    <link rel="stylesheet" href="/vendor/bootstrap-material-datetimepicker-gh-pages/css/bootstrap-material-datetimepicker.css">
+</head>
+<body>
+<style>
+    .main-header {
+        width: 100%;
+        min-height: 100px;
+        background-color: #8BC34A;
+        box-shadow: #ccc 2px 0 12px 0;
+    }
+
+    .sub-header {
+        width: 100%;
+        min-height: 50px;
+        background-color: #333333;
+        box-shadow: #ccc 2px 0 12px 0;
+    }
+
+    .mid-header {
+        width: 100%;
+        min-height: 50px;
+        background-color: white;
+        box-shadow: #ccc 2px 0 12px 0;
+        margin-top:25px;
+        position: relative;
+    }
+
+    .sub-header ul{
+        margin-left: 150px;
+        color: white;
+    }
+
+    .navbar-nav>li>a{
+        color: white;
+    }
+
+    .mid-header .navbar-nav>li>a{
+        color: #333;
+    }
+
+    .kc-brand {
+        position: absolute;
+        top: 15px;
+        left:10px;
+    }
+
+    .kc-slogan{
+        margin-top: -62px;
+        margin-left: 10px;
+    }
+
+    .kc-flav-bar{
+        min-height: 400px;
+        width: 100%;
+        background-color: black;
+        margin-top:25px;
+        overflow: hidden;
+    }
+
+    .kc-indicator{
+        width: 100%;
+        height: 5px;
+        margin-top: -7px;
+    }
+
+    .active{
+        background-color: #00A4FF;
+    }
+
+    .container {
+        width: 1470px !important;
+    }
+
+    .choice-wrapper-left-btn {
+        position: absolute;
+        top: 200px;
+        color: #fff;
+        left: 25px;
+        z-index: 1000;
+        font-size: 32px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        padding: 11px 13px;
+        border: solid 3px white;
+    }
+
+    .choice-wrapper-right-btn {
+        position: absolute;
+        top: 200px;
+        color: #fff;
+        right: 25px;
+        z-index: 1000;
+        font-size: 32px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        padding: 11px 13px;
+        border: solid 3px white;
+    }
+    
+
+    .main-body{
+        width: 100%;
+        height: 100%;
+    }
+
+    .fav-item img{
+        width: auto;
+        height: 400px;
+        padding: 0;
+    }
+
+    .main-thumbs{
+        width: 200px;
+        margin: 15px;
+        padding:0;
+
+    }
+
+    .main-thumbs img{
+        width:200px;
+        height:auto;
+        margin-left:-15px;
+        margin-top:-15px;
+    }
+
+    .main-thumbs div{
+        padding: 15px;
+        font-weight: bold;
+    }
+
+    footer{
+        background-color: #424242;
+        min-height: 400px;
+    }
+
+    .kc-donate-btn{
+        position: absolute;
+        right: 150px;
+
+    }
+    .kc-donate-btn a{
+        min-width: 100px;
+        min-height: 100px;
+        top: -25px;
+    }
+    .btn.btn-fab {
+        margin: 0;
+        padding: 30px 5px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+</style>
+
+    <div id="mainBody" class="main-body">
+        <div class="main-header">
+            <!--<div class="nav-items">-->
+                <!--<div class="btn-group">-->
+                    <!--<a href="javascript:void(0)" class="btn">product</a>-->
+                    <!--<a href="bootstrap-elements.html" data-target="#" class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>-->
+                    <!--<ul class="dropdown-menu">-->
+                        <!--<li><a href="javascript:void(0)">economy</a></li>-->
+                        <!--<li><a href="javascript:void(0)">premium economy</a></li>-->
+                        <!--<li><a href="javascript:void(0)">business</a></li>-->
+                        <!--<li><a href="javascript:void(0)">first class</a></li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+                <!--<div class="btn-group">-->
+                    <!--<a href="javascript:void(0)" class="btn">passengers</a>-->
+                    <!--<a href="bootstrap-elements.html" data-target="#" class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>-->
+                    <!--<ul class="dropdown-menu">-->
+                        <!--<li><a href="javascript:void(0)">1 adult</a></li>-->
+                        <!--<li><a href="javascript:void(0)">2 adults</a></li>-->
+                        <!--<li><a href="javascript:void(0)">3 adults</a></li>-->
+                        <!--<li><a href="javascript:void(0)">4 adults</a></li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+            <!--</div>-->
+
+            <div class="kc-brand">
+                <img src="images/new-header-logo.png">
+                <img class="kc-slogan" src="images/new-making-dreams.png">
+            </div>
+        </div>
+        <div class="sub-header">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="javascript:void(0)">Home</a>
+                    <div class="kc-indicator active"></div>
+                </li>
+                <li><a href="javascript:void(0)">Action</a></li>
+                <li class="dropdown">
+                    <a href="http://fezvrasta.github.io/bootstrap-material-design/bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">
+                        Koru Care Kids
+                        <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="javascript:void(0)">Action</a></li>
+                        <li><a href="javascript:void(0)">Another action</a></li>
+                        <li><a href="javascript:void(0)">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Dropdown header</li>
+                        <li><a href="javascript:void(0)">Separated link</a></li>
+                        <li><a href="javascript:void(0)">One more separated link</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void(0)">Make a donation</a></li>
+                <li><a href="javascript:void(0)">Fundraising</a></li>
+                <li><a href="javascript:void(0)">Events</a></li>
+                <li><a href="javascript:void(0)">Galleries</a></li>
+                <li><a href="javascript:void(0)">About us</a></li>
+            </ul>
+        </div>
+
+
+        <div class="container" style="position: relative">
+            <div class="choice-wrapper-left-btn"><span class="glyphicon glyphicon-menu-left"></span></div>
+            <div class="choice-wrapper-right-btn"><span class="glyphicon glyphicon-menu-right"></span></div>
+            <div class="kc-flav-bar">
+                <ul style="list-style: none; display: inline-flex;">
+                    <li class="fav-item">
+                        <img src="images/397088.jpg">
+                    </li>
+                    <li class="fav-item">
+                        <img src="images/gl.jpg">
+                    </li>
+                    <li class="fav-item">
+                        <img src="images/disney202.jpg">
+                    </li>
+                    <li class="fav-item">
+                        <img src="images/Home%20Page%2001.jpg">
+                    </li>
+                    <li class="fav-item">
+                        <img src="images/Home%20Page%2002.jpg">
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mid-header">
+            <ul class="nav navbar-nav" style="margin-left: 150px;">
+                <li>
+                    <a href="javascript:void(0)">What we do</a>
+                    <div class="kc-indicator active"></div>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">How we do it</a>
+                    <div class="kc-indicator"></div>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">How you can help</a>
+                    <div class="kc-indicator"></div>
+                </li>
+            </ul>
+            <div class="kc-donate-btn">
+                <a href="javascript:void(0)" class="btn btn-warning btn-fab">DONATE <br>NOW!</a>
+            </div>
+        </div>
+
+        <div class="main-content container">
+            <h3>Making dreams come true for seriously ill and disabled children</h3>
+
+            <p>Koru Care HomeKoru Care (NZ) is a registered charitable trust. Our volunteer team work for no financial reward, donating time and expertise to make dreams come true for kids who have drawn the short straw. In some cases they have cancer, kidney disease or heart problems, in other cases they have lost the use of their limbs or have serious congenital abnormalities. But they still have the capacity to smile, laugh and create good memories; they just need someone to wave the magic wand. Often, an injection of enjoyment helps to change a child's outlook, which can improve day-to-day life. In making dreams come true for sick and disabled kids, we're also helping their families.</p>
+            <p>This is a great opportunity for siblings who are often left out to be able to spend more time with their parents who often spend so much time and appear to give more attention to the sick child. Some families take this opportunity to have a mini holiday themselves.</p>
+            <p>Koru Care is well known for delivering dreams in the form of memorable overseas trips. We have annual trips to California – USA and Gold Coast – Australia which are the dream destinations that we have focused on. Each group consists of 26 children and 15 caregivers with each caregiver assigned 2 children. The USA trip is 2 weeks in duration and the Gold Coast is for 8 days. The children that participate on the Koru Care Gold Coast Adventure are generally chosen as they are too ill to handle the long distance travel to California or the long days that this trip has.<p>
+            Closer to home we put on events for the children with our annual pantomime and Christmas Harbour Cruise and picnic. We also provide grants for the cost of flights for children that require medical treatment overseas that is not available in New Zealand.
+            Koru Care HomeThe children who have benefited from Koru Care's help and those who will benefit in the future are chosen because we're their only chance of having a wish come true. For those with a real need, we make sure dreams become reality. To make these dreams come true, Koru Care have a team of dedicated staff and volunteers that work tirelessly to make these events happen. We are not government funded and rely on the generosity of trusts, grants, businesses and the general public.  We are a nationwide organisation and we accept children from all over New Zealand.
+            Please Contact Us if you want any information on what we do and how we can help you</p>
+        </div>
+        
+        <div class="container">
+            <ul style="list-style: none; display: inline-flex;">
+                <li class="main-thumbs">
+                    <div class="well">
+                        <img src="images/Disney10.png">
+                        <div>
+                            Make a donation
+                        </div>
+                    </div>
+                </li>
+
+                <li class="main-thumbs">
+                    <div class="well">
+                        <img src="images/Disney24.jpg">
+                        <div>
+                            Events
+                        </div>
+                    </div>
+                </li>
+
+                <li class="main-thumbs">
+                    <div class="well">
+                        <img src="images/Disney14.jpg">
+                        <div>
+                            Koru Care Video
+                        </div>
+                    </div>
+                </li>
+
+                <li class="main-thumbs">
+                    <div class="well">
+                        <img src="images/Disney17.jpg">
+                        <div>
+                            Make a donation
+                        </div>
+                    </div>
+                </li>
+
+                <li class="main-thumbs">
+                    <div class="well">
+                        <img src="images/Disney10.png">
+                        <div>
+                            Make a donation
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+
+
+    </div>
+
+    <footer>
+
+    </footer>
+
+
+    <script src="/vendor/angular-1.4.7/angular.min.js"></script>
+    <script src="/vendor/jquery/jquery-1.11.3.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="/vendor/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+    <script src="/vendor/bootstrap-material-design-master/scripts/material.js"></script>
+    <script src="/vendor/bootstrap-material-design-master/scripts/ripples.js"></script>
+    <script>
+        $.material.init();
+    </script>
+    <script src="/vendor/bootstrap-material-datetimepicker-gh-pages/js/moment-with-locales.min.js"></script>
+    <script src="/vendor/bootstrap-material-datetimepicker-gh-pages/js/bootstrap-material-datetimepicker.js"></script>
+    <script src="/vendor/fastclick-master/lib/fastclick.js"></script>
+
+</body>
+</html>
